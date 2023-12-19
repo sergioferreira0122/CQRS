@@ -1,4 +1,3 @@
-using CommandHandler.Domain;
 using CommandHandler.Domain.Interfaces;
 using CommandHandler.UseCases.CreateUser;
 using Microsoft.AspNetCore.Mvc;

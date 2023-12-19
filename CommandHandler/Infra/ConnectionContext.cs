@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using CommandHandler.Domain;
+﻿using CommandHandler.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace CommandHandler.Infra

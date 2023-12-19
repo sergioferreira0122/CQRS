@@ -1,5 +1,4 @@
-﻿
-using CommandHandler.Domain;
+﻿using CommandHandler.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace CommandHandler.Infra.UserRepository
@@ -12,6 +11,7 @@ namespace CommandHandler.Infra.UserRepository
         {
             _dbContext = dbContext;
         }
+
         public async Task AddUserAsync(User user)
         {
             await _dbContext.Users.AddAsync(user);
