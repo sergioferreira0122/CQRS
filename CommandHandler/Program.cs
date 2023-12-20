@@ -1,7 +1,8 @@
-using CommandHandler.Domain.Interfaces;
-using CommandHandler.Infra;
-using CommandHandler.Infra.UserRepository;
-using CommandHandler.UseCases.CreateUser;
+using App.Abstractions;
+using App.UserUseCases.CreateUser;
+using Domain.Abstractions;
+using Infra;
+using Infra.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
