@@ -72,3 +72,11 @@ C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Huma
 C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\App.dll
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Domain.dll
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Infra.dll
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Presentation.dll
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Infra.pdb
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Presentation.pdb
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\App.pdb
+C:\Users\Sergio\source\repos\CommandHandler\CommandHandler\bin\Debug\net7.0\Domain.pdb
