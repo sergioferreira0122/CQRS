@@ -1,5 +1,6 @@
 using App.Abstractions;
-using App.UserUseCases.CreateUser;
+using App.UserHandler.Commands.CreateUser;
+using App.UserHandler.Queries.GetByIdUser;
 using Domain.Abstractions;
 using Infra;
 using Infra.Repositories;
@@ -11,6 +12,7 @@ builder.Services.AddTransient<ConnectionContext>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<CreateUserValidator>();
 builder.Services.AddTransient<ICommandHandler<CreateUserCommand>, CreateUserCommandHandler>();
+builder.Services.AddTransient<IQueryHandler<GetByIdUserQuery, GetByIdUserResponse?>, GetByIdUserQueryHandler >();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -1,4 +1,4 @@
-﻿namespace App.UserUseCases
+﻿namespace App.UserHandler
 {
     public class UserErrors
     {

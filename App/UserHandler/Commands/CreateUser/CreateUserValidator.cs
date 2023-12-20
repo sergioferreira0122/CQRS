@@ -1,6 +1,6 @@
 ﻿using Domain.Abstractions;
 
-namespace App.UserUseCases.CreateUser
+namespace App.UserHandler.Commands.CreateUser
 {
     public class CreateUserValidator
     {

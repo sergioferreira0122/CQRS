@@ -2,7 +2,7 @@
 using Domain.Abstractions;
 using Domain.Entities;
 
-namespace App.UserUseCases.CreateUser;
+namespace App.UserHandler.Commands.CreateUser;
 
 public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand>
 {
@@ -21,14 +21,14 @@ public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand>
         if (validatorResult.IsFailure)
             return validatorResult;
 
-        var user = UserMapper(createUserCommand);
+        var user = Mapper(createUserCommand);
 
         await _userRepository.AddUserAsync(user);
 
         return Result.Success();
     }
 
-    private static User UserMapper(CreateUserCommand createUserCommand)
+    private static User Mapper(CreateUserCommand createUserCommand)
     {
         var user = new User()
         {
