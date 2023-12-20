@@ -1,8 +1,9 @@
-﻿using Domain.Abstractions;
+﻿using App.Abstractions;
+using Domain.Abstractions;
 
 namespace App.UserHandler.Commands.CreateUser
 {
-    public class CreateUserValidator
+    public class CreateUserValidator : IValidator<CreateUserCommand>
     {
         private readonly IUserRepository _userRepository;
 
@@ -11,9 +12,9 @@ namespace App.UserHandler.Commands.CreateUser
             _userRepository = userRepository;
         }
 
-        public async Task<Result> IsValidAsync(CreateUserCommand createUserCommand)
+        public async Task<Result> IsValidAsync(CreateUserCommand createUserCommand, CancellationToken cancellationToken)
         {
-            var isEmailUsed = _userRepository.ExistsByEmailAsync(createUserCommand.Email);
+            var isEmailUsed = _userRepository.ExistsByEmailAsync(createUserCommand.Email, cancellationToken);
 
             if (!createUserCommand.Email.Equals(createUserCommand.EmailConfirmed))
             {

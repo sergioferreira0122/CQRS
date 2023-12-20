@@ -26,9 +26,9 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetById(int userId)
+    public async Task<IActionResult> GetById(int userId, CancellationToken cancellationToken)
     {
-        var response = await _getByIdUserQueryHandler.HandleAsync(new GetByIdUserQuery { Id = userId });
+        var response = await _getByIdUserQueryHandler.HandleAsync(new GetByIdUserQuery { Id = userId }, cancellationToken);
 
         if (response == null) return NotFound();
 
@@ -36,9 +36,9 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddUser([FromBody] CreateUserCommand createUserCommand)
+    public async Task<IActionResult> AddUser([FromBody] CreateUserCommand createUserCommand, CancellationToken cancellationToken)
     {
-        var result = await _createUserCommandHandler.HandleAsync(createUserCommand);
+        var result = await _createUserCommandHandler.HandleAsync(createUserCommand, cancellationToken);
 
         if (result.IsSuccess) return Ok();
 

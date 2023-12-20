@@ -6,24 +6,24 @@ namespace App.UserHandler.Commands.CreateUser;
 
 public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand>
 {
-    private readonly CreateUserValidator _createUserValidator;
+    private readonly IValidator<CreateUserCommand> _validator;
     private readonly IUserRepository _userRepository;
 
-    public CreateUserCommandHandler(CreateUserValidator createUserValidator, IUserRepository userRepository)
+    public CreateUserCommandHandler(IValidator<CreateUserCommand> createUserValidator, IUserRepository userRepository)
     {
-        _createUserValidator = createUserValidator;
+        _validator = createUserValidator;
         _userRepository = userRepository;
     }
 
-    public async Task<Result> HandleAsync(CreateUserCommand createUserCommand)
+    public async Task<Result> HandleAsync(CreateUserCommand createUserCommand, CancellationToken cancellationToken)
     {
-        var validatorResult = await _createUserValidator.IsValidAsync(createUserCommand);
+        var validatorResult = await _validator.IsValidAsync(createUserCommand, cancellationToken);
         if (validatorResult.IsFailure)
             return validatorResult;
 
         var user = Mapper(createUserCommand);
 
-        await _userRepository.AddUserAsync(user);
+        await _userRepository.AddUserAsync(user, cancellationToken);
 
         return Result.Success();
     }

@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddTransient<ConnectionContext>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
-builder.Services.AddTransient<CreateUserValidator>();
+builder.Services.AddTransient<IValidator<CreateUserCommand>, CreateUserValidator>();
 builder.Services.AddTransient<ICommandHandler<CreateUserCommand>, CreateUserCommandHandler>();
 builder.Services.AddTransient<IQueryHandler<GetByIdUserQuery, GetByIdUserResponse?>, GetByIdUserQueryHandler >();
 

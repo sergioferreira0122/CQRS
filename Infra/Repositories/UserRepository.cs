@@ -13,37 +13,37 @@ namespace Infra.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task AddUserAsync(User user)
+        public async Task AddUserAsync(User user, CancellationToken cancellationToken)
         {
-            await _dbContext.Users.AddAsync(user);
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.Users.AddAsync(user, cancellationToken);
+            await _dbContext.SaveChangesAsync(cancellationToken);
         }
 
-        public void DeleteUserAsync(User user)
+        public void DeleteUser(User user, CancellationToken cancellationToken)
         {
             _dbContext.Users.Remove(user);
             _dbContext.SaveChanges();
         }
 
-        public async Task<bool> ExistsByEmailAsync(string email)
+        public async Task<bool> ExistsByEmailAsync(string email, CancellationToken cancellationToken)
         {
-            return await _dbContext.Users.FirstOrDefaultAsync(user => user.Email.Equals(email)) != null;
+            return await _dbContext.Users.FirstOrDefaultAsync(user => user.Email.Equals(email), cancellationToken) != null;
         }
 
-        public async Task<User?> GetByIdAsync(int id)
+        public async Task<User?> GetByIdAsync(int id, CancellationToken cancellationToken)
         {
-            return await _dbContext.Users.FirstOrDefaultAsync(user => user.Id == id);
+            return await _dbContext.Users.FirstOrDefaultAsync(user => user.Id == id, cancellationToken);
         }
 
-        public async Task<IEnumerable<User>> GetUsersAsync()
+        public async Task<IEnumerable<User>> GetUsersAsync(CancellationToken cancellationToken)
         {
-            return await _dbContext.Users.ToListAsync();
+            return await _dbContext.Users.ToListAsync(cancellationToken);
         }
 
-        public async Task UpdateUserAsync(User user)
+        public async Task UpdateUserAsync(User user, CancellationToken cancellationToken)
         {
             _dbContext.Users.Entry(user).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(cancellationToken);
         }
     }
 }
