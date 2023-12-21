@@ -61,7 +61,7 @@
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
           }
         },
@@ -872,7 +872,7 @@
           "System.CodeDom": "4.4.0"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
@@ -1535,6 +1535,7 @@
         "dependencies": {
           "App": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.Design": "7.0.14",
           "MySql.Data": "8.2.0",
           "MySql.EntityFrameworkCore": "7.0.10"
         },
@@ -4346,19 +4347,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sergio\\.nuget\\packages\\": {}
+    "C:\\Users\\homer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\CommandHandler.csproj",
+      "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\CommandHandler.csproj",
       "projectName": "CommandHandler",
-      "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\CommandHandler.csproj",
-      "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\obj\\",
+      "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\CommandHandler.csproj",
+      "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4366,18 +4367,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj": {
-              "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj"
+            "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj": {
+              "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj"
             },
-            "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj": {
-              "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj"
+            "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj": {
+              "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj"
             }
           }
         }
@@ -4438,7 +4438,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

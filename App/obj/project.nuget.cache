@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fOF9BvjfmoNXEuilO5EfzR1pS85qEax8DBllNEjNFVtoZCrqNxIDSauSuCo9ytuY2Xnw+PmApTfaRx3f+nqOog==",
+  "dgSpecHash": "aZzqHNlvk/i1A4/bS2is5PLCMGe++R53ZWm3HEf2eTaHUbzOtn+aqKPlCFRlxSCBa9/klL4U5XHHnp0YOBqFhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj",
+  "projectFilePath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

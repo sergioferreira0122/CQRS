@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\CommandHandler.csproj": {}
+    "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\CommandHandler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj": {
+    "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj",
+        "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\obj\\",
+        "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj",
+        "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Domain\\Domain.csproj"
+              "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Domain\\Domain.csproj"
               }
             }
           }
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\CommandHandler.csproj": {
+    "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\CommandHandler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\CommandHandler.csproj",
+        "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\CommandHandler.csproj",
         "projectName": "CommandHandler",
-        "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\CommandHandler.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CommandHandler\\obj\\",
+        "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\CommandHandler.csproj",
+        "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\CommandHandler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,18 +81,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj"
+              "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj"
               },
-              "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj": {
-                "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj"
+              "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj": {
+                "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj"
               }
             }
           }
@@ -153,21 +152,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Domain\\Domain.csproj": {
+    "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -208,21 +207,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj": {
+    "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Infra\\obj\\",
+        "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -236,8 +235,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj": {
-                "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj"
+              "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj": {
+                "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj"
               }
             }
           }
@@ -253,6 +252,10 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
               "version": "[7.0.14, )"
             },
@@ -281,21 +284,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj": {
+    "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\Presentation.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\Presentation\\obj\\",
+        "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\Presentation.csproj",
+        "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -309,8 +312,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj": {
-                "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\App\\App.csproj"
+              "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj": {
+                "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj"
               }
             }
           }
@@ -346,7 +349,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
