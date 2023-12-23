@@ -2609,19 +2609,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\homer\\.nuget\\packages\\": {}
+    "C:\\Users\\Sergio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj",
+      "projectUniqueName": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CQRS\\Infra\\Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\Infra.csproj",
-      "packagesPath": "C:\\Users\\homer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\Infra\\obj\\",
+      "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CQRS\\Infra\\Infra.csproj",
+      "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CQRS\\Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\homer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2635,8 +2635,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj": {
-              "projectPath": "C:\\Users\\homer\\Desktop\\CQRS\\CQRS\\App\\App.csproj"
+            "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CQRS\\App\\App.csproj": {
+              "projectPath": "C:\\Users\\Sergio\\source\\repos\\CommandHandler\\CQRS\\App\\App.csproj"
             }
           }
         }
@@ -2684,7 +2684,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

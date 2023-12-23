@@ -30,7 +30,7 @@ public class UsersController : ControllerBase
     {
         var response = await _getByIdUserQueryHandler.HandleAsync(new GetByIdUserQuery { Id = userId }, cancellationToken);
 
-        if (response == null) return NotFound();
+        if (response == null) return StatusCode(404);
 
         return Ok(response);
     }
@@ -40,7 +40,7 @@ public class UsersController : ControllerBase
     {
         var result = await _createUserCommandHandler.HandleAsync(createUserCommand, cancellationToken);
 
-        if (result.IsSuccess) return Ok();
+        if (result.IsSuccess) return StatusCode(201);
 
         return HandleUserErrors(result);
     }
@@ -49,9 +49,9 @@ public class UsersController : ControllerBase
     {
         var resultError = result.Error;
 
-        if (resultError.Equals(UserErrors.EmailNotMatch)) return BadRequest(result);
-        if (resultError.Equals(UserErrors.PasswordNotMatch)) return BadRequest(result);
-        if (resultError.Equals(UserErrors.EmailUsed)) return Conflict(result);
+        if (resultError.Equals(UserErrors.EmailNotMatch)) return StatusCode(400, result);
+        if (resultError.Equals(UserErrors.PasswordNotMatch)) return StatusCode(400, result);
+        if (resultError.Equals(UserErrors.EmailUsed)) return StatusCode(409, result);
 
         throw new Exception($"Unexpected error: {resultError}");
     }

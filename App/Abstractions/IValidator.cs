@@ -2,7 +2,7 @@
 
 namespace App.Abstractions
 {
-    public interface IValidator<in TCommand> where TCommand : ICommand
+    public interface IValidator<TCommand> where TCommand : ICommand
     {
         Task<Result> IsValidAsync(TCommand tCommand, CancellationToken cancellationToken);
     }

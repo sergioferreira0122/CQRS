@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using System.Threading;
 
 namespace Domain.Abstractions
 {
@@ -12,8 +13,8 @@ namespace Domain.Abstractions
 
         Task AddUserAsync(User user, CancellationToken cancellationToken);
 
-        void DeleteUser(User user, CancellationToken cancellationToken);
+        Task DeleteUserAsync(User user);
 
-        Task UpdateUserAsync(User user, CancellationToken cancellationToken);
+        Task UpdateUserAsync(User user);
     }
 }

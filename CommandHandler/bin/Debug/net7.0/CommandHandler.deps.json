@@ -760,6 +760,7 @@
         "dependencies": {
           "App": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.Design": "7.0.14",
           "MySql.Data": "8.2.0",
           "MySql.EntityFrameworkCore": "7.0.10"
         },

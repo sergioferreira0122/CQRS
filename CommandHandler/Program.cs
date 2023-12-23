@@ -8,7 +8,8 @@ using Infra.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<ConnectionContext>();
+builder.Services.AddDbContext<ConnectionContext>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IValidator<CreateUserCommand>, CreateUserValidator>();
 builder.Services.AddTransient<ICommandHandler<CreateUserCommand>, CreateUserCommandHandler>();

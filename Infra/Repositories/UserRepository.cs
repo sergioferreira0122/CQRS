@@ -16,13 +16,12 @@ namespace Infra.Repositories
         public async Task AddUserAsync(User user, CancellationToken cancellationToken)
         {
             await _dbContext.Users.AddAsync(user, cancellationToken);
-            await _dbContext.SaveChangesAsync(cancellationToken);
         }
 
-        public void DeleteUser(User user, CancellationToken cancellationToken)
+        public Task DeleteUserAsync(User user)
         {
             _dbContext.Users.Remove(user);
-            _dbContext.SaveChanges();
+            return Task.CompletedTask;
         }
 
         public async Task<bool> ExistsByEmailAsync(string email, CancellationToken cancellationToken)
@@ -40,10 +39,10 @@ namespace Infra.Repositories
             return await _dbContext.Users.ToListAsync(cancellationToken);
         }
 
-        public async Task UpdateUserAsync(User user, CancellationToken cancellationToken)
+        public Task UpdateUserAsync(User user)
         {
             _dbContext.Users.Entry(user).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync(cancellationToken);
+            return Task.CompletedTask;
         }
     }
 }

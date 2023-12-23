@@ -8,11 +8,13 @@ public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand>
 {
     private readonly IValidator<CreateUserCommand> _validator;
     private readonly IUserRepository _userRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public CreateUserCommandHandler(IValidator<CreateUserCommand> createUserValidator, IUserRepository userRepository)
+    public CreateUserCommandHandler(IValidator<CreateUserCommand> createUserValidator, IUserRepository userRepository, IUnitOfWork unitOfWork)
     {
         _validator = createUserValidator;
         _userRepository = userRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<Result> HandleAsync(CreateUserCommand createUserCommand, CancellationToken cancellationToken)
@@ -24,6 +26,8 @@ public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand>
         var user = Mapper(createUserCommand);
 
         await _userRepository.AddUserAsync(user, cancellationToken);
+
+        await _unitOfWork.Commit();
 
         return Result.Success();
     }
