@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using App.Abstractions;
+using MediatR;
 
 namespace App.UserHandler.Commands.CreateUser
 {

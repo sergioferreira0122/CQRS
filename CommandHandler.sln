@@ -5,13 +5,17 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandHandler", "CommandHandler\CommandHandler.csproj", "{4E55591C-F826-4F2E-A113-142A4E01749C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{39AEA3D8-045B-4054-95F5-884E7E127409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{39AEA3D8-045B-4054-95F5-884E7E127409}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{A6B1D045-B0D7-41A6-88E1-30C958074AEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "Presentation\Presentation.csproj", "{A6B1D045-B0D7-41A6-88E1-30C958074AEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{FB645621-4AF1-4C4C-88D8-61E481BE4A44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{FB645621-4AF1-4C4C-88D8-61E481BE4A44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{9260F318-318D-4F18-A341-6A83A53B70AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{9260F318-318D-4F18-A341-6A83A53B70AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{731790D2-8283-4EBF-A941-25786A9525EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{22C7A8E9-7B6B-409B-80F2-2E53F9D9EEAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4E55591C-F826-4F2E-A113-142A4E01749C} = {731790D2-8283-4EBF-A941-25786A9525EF}
+		{39AEA3D8-045B-4054-95F5-884E7E127409} = {731790D2-8283-4EBF-A941-25786A9525EF}
+		{A6B1D045-B0D7-41A6-88E1-30C958074AEC} = {731790D2-8283-4EBF-A941-25786A9525EF}
+		{FB645621-4AF1-4C4C-88D8-61E481BE4A44} = {731790D2-8283-4EBF-A941-25786A9525EF}
+		{9260F318-318D-4F18-A341-6A83A53B70AB} = {731790D2-8283-4EBF-A941-25786A9525EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A62C1EB3-9874-4208-B014-1D65B131D858}

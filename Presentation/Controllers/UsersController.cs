@@ -3,6 +3,7 @@ using App.Abstractions;
 using App.UserHandler;
 using App.UserHandler.Commands.CreateUser;
 using App.UserHandler.Queries.GetByIdUser;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -12,33 +13,35 @@ namespace Presentation.Controllers;
 [Route("api/[controller]")]
 public class UsersController : ControllerBase
 {
-    private readonly ICommandHandler<CreateUserCommand> _createUserCommandHandler;
-    private readonly IQueryHandler<GetByIdUserQuery, GetByIdUserResponse> _getByIdUserQueryHandler;
     private readonly ILogger<UsersController> _logger;
+    private readonly ISender _sender;
 
-    public UsersController(ILogger<UsersController> logger,
-        ICommandHandler<CreateUserCommand> createUserCommand,
-        IQueryHandler<GetByIdUserQuery, GetByIdUserResponse> getByIdUserQueryHandler)
+    public UsersController(
+        ILogger<UsersController> logger,
+        ISender sender)
     {
         _logger = logger;
-        _createUserCommandHandler = createUserCommand;
-        _getByIdUserQueryHandler = getByIdUserQueryHandler;
+        _sender = sender;
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetById(int userId, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetById(
+        int userId,
+        CancellationToken cancellationToken)
     {
-        var response = await _getByIdUserQueryHandler.HandleAsync(new GetByIdUserQuery { Id = userId }, cancellationToken);
+        var response = await _sender.Send(new GetByIdUserQuery { Id = userId }, cancellationToken);
 
-        if (response == null) return StatusCode(404);
+        if (response == null) return StatusCode(404, UserErrors.UserNotFound);
 
         return Ok(response);
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddUser([FromBody] CreateUserCommand createUserCommand, CancellationToken cancellationToken)
+    public async Task<IActionResult> AddUser(
+        [FromBody] CreateUserCommand createUserCommand,
+        CancellationToken cancellationToken)
     {
-        var result = await _createUserCommandHandler.HandleAsync(createUserCommand, cancellationToken);
+        var result = await _sender.Send(createUserCommand, cancellationToken);
 
         if (result.IsSuccess) return StatusCode(201);
 

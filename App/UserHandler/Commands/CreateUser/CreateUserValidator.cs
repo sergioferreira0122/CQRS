@@ -12,7 +12,9 @@ namespace App.UserHandler.Commands.CreateUser
             _userRepository = userRepository;
         }
 
-        public async Task<Result> IsValidAsync(CreateUserCommand createUserCommand, CancellationToken cancellationToken)
+        public async Task<Result> IsValidAsync(
+            CreateUserCommand createUserCommand,
+            CancellationToken cancellationToken)
         {
             var isEmailUsed = _userRepository.ExistsByEmailAsync(createUserCommand.Email, cancellationToken);
 

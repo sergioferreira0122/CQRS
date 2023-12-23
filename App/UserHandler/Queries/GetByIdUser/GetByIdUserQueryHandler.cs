@@ -7,29 +7,22 @@ namespace App.UserHandler.Queries.GetByIdUser;
 public class GetByIdUserQueryHandler : IQueryHandler<GetByIdUserQuery, GetByIdUserResponse?>
 {
     private readonly IUserRepository _userRepository;
+    private readonly IMapper<User, GetByIdUserResponse> _mapper;
 
-    public GetByIdUserQueryHandler(IUserRepository userRepository)
+    public GetByIdUserQueryHandler(
+        IUserRepository userRepository,
+        IMapper<User, GetByIdUserResponse> mapper)
     {
         _userRepository = userRepository;
+        _mapper = mapper;
     }
 
-    public async Task<GetByIdUserResponse?> HandleAsync(GetByIdUserQuery query, CancellationToken cancellationToken)
+    public async Task<GetByIdUserResponse?> Handle(
+        GetByIdUserQuery query,
+        CancellationToken cancellationToken)
     {
         var user = await _userRepository.GetByIdAsync(query.Id, cancellationToken);
 
-        return user != null ? Mapper(user) : null;
-    }
-
-    private static GetByIdUserResponse Mapper(User user)
-    {
-        var response = new GetByIdUserResponse
-        {
-            Id = user.Id,
-            Email = user.Email,
-            Name = user.Name,
-            BirthdayDate = DateOnly.FromDateTime(user.BirthdayDate),
-        };
-
-        return response;
+        return user != null ? _mapper.Map(user) : null;
     }
 }

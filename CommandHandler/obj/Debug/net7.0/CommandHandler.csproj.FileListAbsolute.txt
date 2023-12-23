@@ -244,3 +244,6 @@ C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\obj\Debug\net7.0
 C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\obj\Debug\net7.0\CommandHandler.csproj.CopyComplete
 C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\obj\Debug\net7.0\CommandHandler.genruntimeconfig.cache
 C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\obj\Debug\net7.0\ref\CommandHandler.dll
+C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\bin\Debug\net7.0\MediatR.dll
+C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\Users\Sergio\source\repos\CommandHandler\CQRS\CommandHandler\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

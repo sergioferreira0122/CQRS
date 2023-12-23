@@ -1,20 +1,14 @@
-using App.Abstractions;
-using App.UserHandler.Commands.CreateUser;
-using App.UserHandler.Queries.GetByIdUser;
-using Domain.Abstractions;
+using App;
 using Infra;
-using Infra.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddDbContext<ConnectionContext>();
-builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-builder.Services.AddTransient<IValidator<CreateUserCommand>, CreateUserValidator>();
-builder.Services.AddTransient<ICommandHandler<CreateUserCommand>, CreateUserCommandHandler>();
-builder.Services.AddTransient<IQueryHandler<GetByIdUserQuery, GetByIdUserResponse?>, GetByIdUserQueryHandler >();
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(AssemblyReference.Assembly));
 
+// Add services to the container.
+builder.Services.AddInfra();
+builder.Services.AddApp();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

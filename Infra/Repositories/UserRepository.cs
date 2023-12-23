@@ -13,7 +13,9 @@ namespace Infra.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task AddUserAsync(User user, CancellationToken cancellationToken)
+        public async Task AddUserAsync(
+            User user,
+            CancellationToken cancellationToken)
         {
             await _dbContext.Users.AddAsync(user, cancellationToken);
         }
@@ -24,14 +26,21 @@ namespace Infra.Repositories
             return Task.CompletedTask;
         }
 
-        public async Task<bool> ExistsByEmailAsync(string email, CancellationToken cancellationToken)
+        public async Task<bool> ExistsByEmailAsync(
+            string email,
+            CancellationToken cancellationToken)
         {
-            return await _dbContext.Users.FirstOrDefaultAsync(user => user.Email.Equals(email), cancellationToken) != null;
+            return await _dbContext.Users.FirstOrDefaultAsync(
+                       user => user.Email.Equals(email), cancellationToken)
+                   != null;
         }
 
-        public async Task<User?> GetByIdAsync(int id, CancellationToken cancellationToken)
+        public async Task<User?> GetByIdAsync(
+            int id,
+            CancellationToken cancellationToken)
         {
-            return await _dbContext.Users.FirstOrDefaultAsync(user => user.Id == id, cancellationToken);
+            return await _dbContext.Users.FirstOrDefaultAsync(
+                user => user.Id == id, cancellationToken);
         }
 
         public async Task<IEnumerable<User>> GetUsersAsync(CancellationToken cancellationToken)

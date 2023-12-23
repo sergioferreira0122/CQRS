@@ -1,7 +1,9 @@
-﻿namespace App.Abstractions
+﻿using MediatR;
+
+namespace App.Abstractions
 {
-    public interface ICommandHandler<TCommand> where TCommand : ICommand
+    public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>
+        where TCommand : ICommand
     {
-        Task<Result> HandleAsync(TCommand command, CancellationToken cancellationToken);
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace App.Abstractions
+﻿using MediatR;
+
+namespace App.Abstractions
 {
-    public interface ICommand
+    public interface ICommand : IRequest<Result>
     {
     }
 }

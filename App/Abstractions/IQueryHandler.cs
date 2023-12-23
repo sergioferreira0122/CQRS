@@ -1,7 +1,9 @@
-﻿namespace App.Abstractions
+﻿using MediatR;
+
+namespace App.Abstractions
 {
-    public interface IQueryHandler<TQuery, TResult> where TQuery : IQuery
+    public interface IQueryHandler<TQuery, TResponse> : IRequestHandler<TQuery, TResponse>
+        where TQuery : IQuery<TResponse>
     {
-        Task<TResult?> HandleAsync(TQuery query, CancellationToken cancellationToken);
     }
 }

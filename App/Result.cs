@@ -2,7 +2,9 @@
 
 namespace App
 {
-    public sealed record Error(string Code, string? Description = null)
+    public sealed record Error(
+        string Code,
+        string? Description = null)
     {
         public static readonly Error None = new(string.Empty);
 
@@ -15,7 +17,9 @@ namespace App
         [JsonIgnore] public bool IsFailure => !IsSuccess;
         public Error Error { get; }
 
-        private Result(bool isSuccess, Error error)
+        private Result(
+            bool isSuccess,
+            Error error)
         {
             if (isSuccess && error != Error.None ||
                 !isSuccess && error == Error.None)

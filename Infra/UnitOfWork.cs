@@ -1,5 +1,4 @@
 ﻿using Domain.Abstractions;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Infra
 {
